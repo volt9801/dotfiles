@@ -12,7 +12,7 @@ parse_git_branch() {
 
 if [ "$color_prompt" = yes ]; then
     PS1='\[$(printf "%*s" $(($(tput cols)-19)) "" | sed "s/ / /g")\[\033[01;35m\][\d \A]\r${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\[\033[01;33m\] $(parse_git_branch)'
-    PS1+='\n\[\033[00;32m\]└─\[\e[38;5;15m\]\$ '
+    PS1+='\n\[\033[00;32m\]└─\[\033[00;39m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
